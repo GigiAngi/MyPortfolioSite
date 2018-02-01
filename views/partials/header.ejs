@@ -1,11 +1,28 @@
-<!DOCTYPE <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
-<head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Page Title</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-    <script src="main.js"></script>
-</head>
-<body>
+        
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="utf-8" />
+        <title>Tóth Angi Web Sufni</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="/css/myportfolio.css">
+    </head>
+
+
+<body class="snow">
+        <div id= "snow" class="px-5">
+                <div class="container">
+                <nav class="navbar navbar-expand-lg navbar-light bg-light bradius">
+                    <div title="Home"><a href="/"><i class="fa fa-home fa-fw" aria-hidden="true"></i></a></div>
+                    <a class="navbar-brand" href="#"> Navbar</a>
+                        <div class="navbar-nav mr-auto">           
+                        </div>
+                        <% if (user) { %>
+                            <%= user.last %>
+                            <div>Üdvözöllek <%= user ? user.nickname : '' %> !</div>
+                            <div title="Logout"><a href="/logout"><i class="fa fa-sign-out fa-fw" aria-hidden="true"></i></a></div>
+                        <% }else{ %>
+                            <div title="Login/Register"><a href="/login"><i class="fa fa-user fa-fw" aria-hidden="true"></i></a></div>
+                        <% } %>    
+                </nav>
