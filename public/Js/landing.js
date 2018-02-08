@@ -1,3 +1,13 @@
+$(document).ready(
+    function() {
+      setTimeout(function() {
+        $('#loading').addClass('hidden');
+        $('#loading').removeClass('loading');
+        $('#content').removeClass('hidden');
+        }, 3000);
+    }
+  );
+
 $(function()
 {
     $('#imgprofile').hover(
