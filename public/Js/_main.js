@@ -40,5 +40,20 @@
 	    s.refresh($('.homeSlide'));
 	    
 	}
+
+	$(document).ready(function(){
+		$('.longstory1').addClass("hiding");
+
+		$('.longstory1').click(function() {
+			var $this = $(this);
+
+			if ($this.hasClass("hiding")) {
+				$(this).removeClass("hiding").addClass("visibleing");
+
+			} else {
+				$(this).removeClass("visibleing").addClass("hiding");
+			}
+		});
+	});
 		
 } )( jQuery );
