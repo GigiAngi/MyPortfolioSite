@@ -41,18 +41,19 @@
 	    
 	}
 
-	$(document).ready(function(){
-		$('.longstory1').addClass("hiding");
-
-		$('.longstory1').click(function() {
-			var $this = $(this);
-
-			if ($this.hasClass("hiding")) {
-				$(this).removeClass("hiding").addClass("visibleing");
-
-			} else {
-				$(this).removeClass("visibleing").addClass("hiding");
+	$(function() {
+        $(".project").on('click', function() { 
+        	if ($(".details").is(":hidden")) {
+            	$(".details").slideDown();
+            } else {
+            	$(".details").slideUp();
 			}
+        });
+	});
+	
+	$(function() {
+		$(".leftjustified").mouseleave(function(){
+			$(".details").slideUp();
 		});
 	});
 		
